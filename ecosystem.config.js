@@ -1,13 +1,11 @@
 module.exports = {
   apps: [
     {
-      name: "fastserver",
-      script: "-m",
-      args: "uvicorn main:app --host 0.0.0.0 --port 8000",
-      interpreter: "./.venv/bin/python3",
-      env: {
-        PYTHONPATH: ".",
-      },
+      name: "fastapp",
+      script: "uvicorn",
+      args: "main:app --host 0.0.0.0 --port 8000",
+      interpreter: "python3",
+      watch: false,
     },
   ],
 };
